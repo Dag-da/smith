@@ -23,25 +23,25 @@ export default function ProfilCardItem() {
     },
     {
       icon: <MailIcon />,
-      grey: "Location: ",
-      white: "London UK",
+      grey: "contactme@templatename.com",
+      white: "",
       id: 3,
     },
     {
       icon: <PhoneIcon />,
-      grey: "contactme@template.com ",
+      grey: "+76 6524 567862 763",
       white: "",
       id: 4,
     },
     {
       icon: <DesktopComputerIcon />,
-      grey: "Location: ",
+      grey: "www.mytemplatename.com",
       white: "",
       id: 5,
     },
   ];
   return (
-    <div className="container_profil-card">
+<>
       {datas.map((data) => (
         <ProfilItem key={data.id}>
           <div className="icon">{data.icon}</div>
@@ -51,7 +51,7 @@ export default function ProfilCardItem() {
           </p>
         </ProfilItem>
       ))}
-    </div>
+</>
   );
 }
 const ProfilItem = styled.div`
