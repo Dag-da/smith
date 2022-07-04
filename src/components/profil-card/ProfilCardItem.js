@@ -43,13 +43,13 @@ export default function ProfilCardItem() {
   return (
 <>
       {datas.map((data) => (
-        <ProfilItem key={data.id}>
-          <div className="icon">{data.icon}</div>
-          <p>
-            <span>{data.grey}</span>
+        <div className="flex my-2" key={data.id}>
+          <div className="w-5 mr-2 text-primary-dark">{data.icon}</div>
+          <p className="w-200 text-accent">
+            <span className="text-accent-dark">{data.grey}</span>
             {data.white}
           </p>
-        </ProfilItem>
+        </div>
       ))}
 </>
   );
