@@ -3,45 +3,39 @@ import {Link} from "react-router-dom"
 import { AiOutlineGooglePlus, AiOutlineTwitter } from "react-icons/ai";
 import { BsPinterest } from "react-icons/bs"
 import { TiSocialFacebook } from "react-icons/ti"
-import styled from 'styled-components';
 
 
 export default function ProfilCardSN() {
+    const size = "h-5 w-5"
     const datas = [
         {
-            icon: <AiOutlineGooglePlus />,
+            icon: <AiOutlineGooglePlus className={size} />,
             id: 1,
             slug: "/",
         },
         {
-            icon: <TiSocialFacebook />,
+            icon: <TiSocialFacebook className={size} />,
             id: 2,
             slug: "/",
         },
         {
-            icon: <BsPinterest />,
+            icon: <BsPinterest className={size} />,
             id: 3,
             slug: "/",
         },
         {
-            icon: <AiOutlineTwitter />,
+            icon: <AiOutlineTwitter className={size} />,
             id: 4,
             slug: "/",
         },
     ]
   return (
-    <SocialNetwork className='profil-card_SN'>
+    <div className='flex justify-center space-x-3 text-secondary'>
         {datas.map((data) => (
             <Link to={data.slug} key={data.id}>
                 {data.icon}
             </Link>
         ))}
-    </SocialNetwork>
+    </div>
   )
 }
-const SocialNetwork = styled.div`
-    display: flex;
-    color: #fff;
-    a {
-        margin: 0 .5rem;
-}`

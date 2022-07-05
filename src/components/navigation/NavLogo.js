@@ -1,22 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 export default function NavLogo() {
   return (
-    <div>
-      <Link to="/">
-        <Logo>
-          Smith<span>.</span>CV
-        </Logo>
-      </Link>
-    </div>
+    <Link to="/" className="flex items-center">
+        <span className="self-center text-xl font-black whitespace-nowrap text-primary">Smith<span className='text-primary-light'>.</span>CV</span>
+    </Link>
   );
-}
-const Logo = styled.p`
-  font-weight: 900;
-  color: #100f3a;
-  span {
-    color: #8583e1;
-  }
-`;
+};

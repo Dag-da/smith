@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 export default function NavItem() {
   const datas = [
@@ -36,14 +35,13 @@ export default function NavItem() {
     },
   ];
   return (
-    <Menu>
+    <>
       {datas.map((data) => (
-        <Link to={data.slug} key={data.key}>
-          <li>{data.item}</li>
+        <Link to={data.slug} key={data.key} >
+          <li className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 md:hover:bg-primary-light focus:text-white focus:bg-primary-light md:bg-primary md:text-white md:border-b-0">{data.item}</li>
         </Link>
+        
       ))}
-    </Menu>
+    </>
   );
 }
-const Menu = styled.ul`
-`

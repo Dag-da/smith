@@ -3,13 +3,6 @@ module.exports = {
 		extend: {
 			container: {
 				center: true,
-				padding: {
-					DEFAULT: "1.5rem",
-					xs: "1.5rem",
-					sm: "2rem",
-					lg: "4rem",
-					xl: "7rem",
-					"2xl": "12rem",
 				},
 			},
 			borderRadius: {
@@ -18,13 +11,13 @@ module.exports = {
 			},
 			colors: {
 				primary: {
-					light: "#85d7ff",
-					DEFAULT: "#1fb6ff",
-					dark: "#009eeb",
+					light: "#8583e1",
+					DEFAULT: "#100f3a",
+					dark: "#100f3a",
 				},
 				secondary: {
-					light: "#ff7ce5",
-					DEFAULT: "#ff49db",
+					light: "##f5f0f0",
+					DEFAULT: "#7a798c",
 					dark: "#ff16d1",
 				},
 				accent: {

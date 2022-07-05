@@ -5,7 +5,6 @@ import {
   PhoneIcon,
   DesktopComputerIcon,
 } from "@heroicons/react/outline";
-import styled from "styled-components";
 
 export default function ProfilCardItem() {
   const datas = [
@@ -41,35 +40,16 @@ export default function ProfilCardItem() {
     },
   ];
   return (
-<>
+<div className="mb-5">
       {datas.map((data) => (
         <div className="flex my-2" key={data.id}>
-          <div className="w-5 mr-2 text-primary-dark">{data.icon}</div>
-          <p className="w-200 text-accent">
-            <span className="text-accent-dark">{data.grey}</span>
+          <div className="w-5 mr-5 text-primary-light">{data.icon}</div>
+          <p className="w-200 text-white">
+            <span className="text-secondary">{data.grey}</span>
             {data.white}
           </p>
         </div>
       ))}
-</>
+</div>
   );
 }
-const ProfilItem = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: .8rem;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  color: #fff;
-  svg {
-    height: 1em;
-    color: #8583e1;
-  }
-  span {
-    color: #7a798c;
-  }
-  .icon {
-    width: 1rem;
-    margin-right: 1em;
-  }
-`;
