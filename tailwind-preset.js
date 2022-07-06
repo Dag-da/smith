@@ -3,6 +3,14 @@ module.exports = {
 		extend: {
 			container: {
 				center: true,
+				width : "100%",
+				padding: {
+					DEFAULT: "0.5rem",
+					xs: "1.5rem",
+					sm: "2rem",
+					lg: "4rem",
+					xl: "7rem",
+					"2xl": "12rem",
 				},
 			},
 			borderRadius: {
@@ -16,7 +24,7 @@ module.exports = {
 					dark: "#100f3a",
 				},
 				secondary: {
-					light: "##f5f0f0",
+					light: "#f5f0f0",
 					DEFAULT: "#7a798c",
 					dark: "#ff16d1",
 				},
@@ -59,8 +67,8 @@ module.exports = {
 	plugins: [
 		require("@tailwindcss/typography"),
 		require("flowbite/plugin"),
-		// require("daisyui"),
 	],
+}
 	// daisyUI config (optional)
 	// daisyui: {
 	//     styled: true,
@@ -88,4 +96,4 @@ module.exports = {
 	//     prefix: "",
 	//     darkTheme: "night",
 	// },
-};
+
