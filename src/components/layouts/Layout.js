@@ -8,7 +8,7 @@ export default function Layout({children}) {
   return (
     <>
     <Nav />
-    <main className='w-full px-3 flex flex-col md:flex-row'>
+    <main className='w-full px-3 flex flex-col md:flex-row md:h-full'>
         <ProfilCard />
         <LayoutSection>{children}</LayoutSection>
     </main>

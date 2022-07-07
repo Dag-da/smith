@@ -13,7 +13,7 @@ code {
     monospace;
 }
 @media (min-width: 768px) { 
-  body {
-    height: 95vh;
+  #root {
+    height: 90vh;
   }
  }
