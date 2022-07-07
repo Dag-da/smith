@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import HomePageCounter from './HomePageCounter'
 
-export default function HomePageProgressBar({id, style, percent, softSkill}) {
-  return (
-    <ProgressBar key={id}>
-        <div className='soft-skill'>
+export default function HomePageProgressBar({style, percent, softSkill}) {
+  return ( 
+    <SoftSkill>   
             <div className='outer'>
                 <div className='inner'>
-                    <div id="number" className='text-primary text-5xl font-bold'>{percent}</div>
+                    <HomePageCounter percent={percent} />
                 </div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="15rem" height="15rem">
@@ -19,20 +19,15 @@ export default function HomePageProgressBar({id, style, percent, softSkill}) {
                 </defs>
                 <circle cx="110" cy="110" r="105" strokeLinecap="round" className={style} />
             </svg>
-            <h3 className='text-xl font-bold text-center text-primary uppercase mt-7'>{softSkill}</h3>
-        </div>
-    </ProgressBar>
+            <h3 className='text-xl font-bold text-center text-primary uppercase mt-7'>{softSkill}</h3> 
+    </SoftSkill>
   )
 }
-export const ProgressBar = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-.soft-skill{
+export const SoftSkill = styled.div`
     width: 15rem;
     height: 15rem;
     position: relative;
-}
+
 .outer{
     height: 15rem;
     width: 15rem;
